@@ -1,9 +1,9 @@
 <template>
-  <router-view v-slot="{ Component }">
+  <!-- <router-view v-slot="{ Component }">
     <transition name="fade" mode="out-in">
       <component :is="Component" />
     </transition>
-  </router-view>
+  </router-view> -->
 
   <router-view v-slot="{ Component, route }">
     <transition :name="route.meta.transition || 'fade'" mode="out-in">
@@ -21,16 +21,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, "PingFang SC", "Microsoft Yahei", sans-serif;
+  font-family: Arial, 'PingFang SC', 'Microsoft Yahei', sans-serif;
 }
 
 body {
   background-color: #0f141c;
   opacity: 1;
-  background-image: radial-gradient(
-    #212943 0.6000000000000001px,
-    #0f141c 0.6000000000000001px
-  );
+  background-image: radial-gradient(#212943 0.6000000000000001px, #0f141c 0.6000000000000001px);
   background-size: 12px 12px;
   color: white;
 }
@@ -56,7 +53,7 @@ a {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.2s;
+  transition: opacity 0.5s;
 }
 .fade-enter-from,
 .fade-leave-to {
@@ -64,10 +61,10 @@ a {
 }
 
 .fadeAndMove-enter-active {
-  transition: all 0.4s;
+  transition: all 1.4s;
 }
 .fadeAndMove-enter-from {
-  transform: translateY(-10px);
+  transform: translateX(-1000px);
   opacity: 0;
 }
 

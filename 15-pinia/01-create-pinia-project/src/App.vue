@@ -1,6 +1,8 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import HelloWorld from './components/HelloWorld.vue';
+import TheWelcome from './components/TheWelcome.vue';
+import { ref } from 'vue';
+const text = ref();
 </script>
 
 <template>

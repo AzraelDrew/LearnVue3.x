@@ -1,15 +1,15 @@
-import BlogListPage from "./pages/BlogListPage.vue";
-import BlogPostPage from "./pages/BlogPostPage.vue";
+import BlogListPage from './pages/BlogListPage.vue';
+import BlogPostPage from './pages/BlogPostPage.vue';
 
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
   {
-    path: "/",
+    path: '/',
     component: BlogListPage,
   },
   {
-    path: "/:postId",
+    path: '/:postId',
     component: BlogPostPage,
   },
 ];
@@ -35,7 +35,7 @@ const router = createRouter({
     if (savedPosition) {
       return savedPosition;
     } else {
-      return { top: 0 };
+      return { top: 200, behavior: 'smooth' };
     }
   },
 });

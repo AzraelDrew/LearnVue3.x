@@ -2,6 +2,7 @@
   <router-link to="/">主页</router-link>
   <router-link to="/blogs">博客</router-link>
   <router-link to="/about">关于</router-link>
+  <router-link to="/test">test</router-link>
 </template>
 
 <style scoped>

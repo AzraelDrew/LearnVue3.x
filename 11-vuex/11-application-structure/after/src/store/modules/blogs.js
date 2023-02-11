@@ -1,8 +1,8 @@
-export const blogs = {
+export default {
   namespaced: true,
   state() {
     return {
-      list: ["blog1", "blog2", "blog3", "blog4", "blog5"],
+      list: ['blog1', 'blog2', 'blog3', 'blog4', 'blog5'],
     };
   },
   mutations: {
@@ -17,14 +17,14 @@ export const blogs = {
       console.log(rootState);
 
       setTimeout(() => {
-        commit("addBlog", payload);
+        commit('addBlog', payload);
       }, 1000);
     },
     addBlogGlobal: {
       root: true,
       handler({ commit }, payload) {
         setTimeout(() => {
-          commit("addBlog", payload);
+          commit('addBlog', payload);
         }, 1000);
       },
     },
@@ -34,7 +34,7 @@ export const blogs = {
       // return getters.limitStr + "博客";
       // Getters 现在只能访问本模块中的
       console.log(rootState); // 访问 root state
-      return rootGetters.limitStr + "博客";
+      return rootGetters.limitStr + '博客';
     },
     limitedBlogs(state, getters, rootState) {
       return state.list.slice(0, rootState.limit || -1);

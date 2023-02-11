@@ -1,10 +1,10 @@
-import { createStore, createLogger } from "vuex";
-import actions from "./actions";
-import getters from "./getters";
-import mutations from "./mutations";
+import { createStore, createLogger } from 'vuex';
+import actions from './actions';
+import getters from './getters';
+import mutations from './mutations';
 
-import { blogs } from "./modules/blogs";
-import { users } from "./modules/users";
+import blogs from './modules/blogs';
+import users from './modules/users';
 
 // 或者使用默认导出也可以
 export const store = createStore({
@@ -22,3 +22,4 @@ export const store = createStore({
   actions: actions,
   getters: getters,
 });
+ 

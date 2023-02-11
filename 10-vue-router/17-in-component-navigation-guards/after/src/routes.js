@@ -1,34 +1,34 @@
-import AddBlog from "./pages/AddBlog.vue";
-import BlogDetails from "./pages/BlogDetails.vue";
-import BlogManagement from "./pages/BlogManagement.vue";
-import RightSidebar from "./pages/RightSidebar.vue";
-import LoginPage from "./pages/LoginPage.vue";
-import HomePage from "./pages/HomePage.vue";
+import AddBlog from './pages/AddBlog.vue';
+import BlogDetails from './pages/BlogDetails.vue';
+import BlogManagement from './pages/BlogManagement.vue';
+import RightSidebar from './pages/RightSidebar.vue';
+import LoginPage from './pages/LoginPage.vue';
+import HomePage from './pages/HomePage.vue';
 
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
   {
-    path: "/",
+    path: '/',
     component: HomePage,
   },
   {
-    path: "/login",
+    path: '/login',
     component: LoginPage,
   },
   {
-    path: "/blogs",
+    path: '/blogs',
     component: BlogManagement,
     children: [
       {
-        path: "new",
+        path: 'new',
         components: {
           default: AddBlog,
           rightSideBar: RightSidebar,
         },
       },
       {
-        path: "details/:postId",
+        path: 'details/:postId',
         component: BlogDetails,
       },
     ],

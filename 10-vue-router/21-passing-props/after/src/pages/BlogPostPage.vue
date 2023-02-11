@@ -10,16 +10,17 @@
   </article>
 </template>
 <script>
-import { getBlogPostById } from "../data/blogPosts";
+import { getBlogPostById } from '../data/blogPosts';
 
 export default {
-  props: ["postId"],
+  props: ['postId', 'query'],
   data() {
     return { blogPost: {} };
   },
   created() {
     // this.blogPost = getBlogPostById(this.$route.params.postId);
     console.log(this.postId);
+    console.log(this.query);
     console.log(typeof this.postId); // 函数形式，可以改变 postId 的类型
     this.blogPost = getBlogPostById(this.postId);
   },
@@ -37,11 +38,7 @@ footer {
 }
 
 footer a {
-  background: linear-gradient(
-    90deg,
-    hsl(240deg, 50%, 50%),
-    hsl(280deg, 50%, 50%)
-  );
+  background: linear-gradient(90deg, hsl(240deg, 50%, 50%), hsl(280deg, 50%, 50%));
   padding: 0.9em 1.4em;
   border-radius: 4px;
   color: white;

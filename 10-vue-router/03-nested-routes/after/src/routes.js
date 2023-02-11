@@ -1,21 +1,21 @@
-import HomePage from "./pages/HomePage.vue";
-import AboutMe from "./pages/AboutMe.vue";
-import WorkExperience from "./pages/about/WorkExperience.vue";
-import EducationExperience from "./pages/about/EducationExperience.vue";
+import HomePage from './pages/HomePage.vue';
+import AboutMe from './pages/AboutMe.vue';
+import WorkExperience from './pages/about/WorkExperience.vue';
+import EducationExperience from './pages/about/EducationExperience.vue';
 
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
   {
-    path: "/",
+    path: '/',
     component: HomePage,
   },
   {
-    path: "/about",
+    path: '/about',
     component: AboutMe,
     children: [
-      { path: "work", component: WorkExperience },
-      { path: "education", component: EducationExperience },
+      { path: 'work', component: WorkExperience },
+      { path: 'education', component: EducationExperience },
     ],
   },
 ];

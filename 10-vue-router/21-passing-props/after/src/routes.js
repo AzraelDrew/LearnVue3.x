@@ -1,22 +1,23 @@
-import BlogListPage from "./pages/BlogListPage.vue";
-import BlogPostPage from "./pages/BlogPostPage.vue";
+import BlogListPage from './pages/BlogListPage.vue';
+import BlogPostPage from './pages/BlogPostPage.vue';
 
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
   {
-    path: "/",
+    path: '/',
     component: BlogListPage,
   },
   {
-    path: "/:postId",
+    path: '/:postId',
     component: BlogPostPage,
     // props: true,
     // props: { postId: 5 },
-    props: (route) => {
-      console.log(route);
-      return { postId: Number(route.params.postId) };
-    },
+    //   props: (route) => {
+    //     console.log(route);
+    //     return { postId: Number(route.params.postId) };
+    //   },
+    props: (route) => ({ query: 123, postId: Number(route.params.postId) }),
   },
 ];
 
